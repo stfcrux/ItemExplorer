@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Product } from '../shared/models/product';
+import { ProductService } from '../shared/services/product.service';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  products: Product[] = [];
 
-  constructor() {}
+  constructor(private productService: ProductService) {
+    this.products = this.productService.getProducts();
+  }
+
+  delete(item: Product) {
+    this.productService.delete(item);
+    } 
 
 }

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit Item</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <img [src]=productImage alt="" class="image-card">
+
+  <ion-item>
+    <ion-label color="medium">{{productId}}</ion-label>
+  </ion-item>
+
+  <ion-button expand="block" color="secondary" (click)="update()">
+    Update
+  </ion-button>
+
+</ion-content>

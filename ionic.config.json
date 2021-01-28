@@ -1,5 +1,7 @@
 {
   "name": "ItemExplorer",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
